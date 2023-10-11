@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,600;9..40,700&family=Young+Serif&display=swap");
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "DM Sans", sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+
+header {
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	font-family: "Young Serif", serif;
+	justify-content: center;
+}
+
+footer {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	height: 50px;
+	justify-content: center;
+	margin-top: auto;
+}
+
+.timeSection {
+	display: flex;
+	height: 100px;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+#timeImage {
+	height: 100%;
+	width: auto;
+}
+
+@media screen and (max-width: 750px) {
+
+}
+
+@media screen and (max-width: 400px) {
+
+}

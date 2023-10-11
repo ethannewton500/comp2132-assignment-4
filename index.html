@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta content="ie=edge" http-equiv="X-UA-Compatible">
+		<title>COMP2132 Assignment 04</title>
+		<link href="css/styles.css" rel="stylesheet">
+		<script defer="defer" src="scripts/assignment04-data.js"></script>
+		<script defer="defer" src="scripts/assignment04-functions.js"></script>
+		<script defer="defer" src="scripts/assignment04.js"></script>
+	</head>
+
+	<body>
+		<header>
+			<h1>Assignment 04</h1>
+		</header>
+		<main>
+			<section class="timeSection">
+				<img id="timeImage">
+				<h2 id="timeMessage"></h2>
+			</section>
+			<section>
+				<h2>Part One: List of Images</h2>
+				<div>
+					<h3>Invoke with something other than array</h3>
+					<div id="imageWrongArrayArgument"></div>
+				</div>
+				<div>
+					<h3>Invoke with arrays containing wrong data type</h3>
+					<p>Array of numbers, not string image names</p>
+					<p>(See console for error messages)</p>
+					<div id="imageNumbers"></div>
+					<p>Array of booleans, not string image names</p>
+					<p>(See console for error messages)</p>
+					<div id="imageBooleans"></div>
+					<p>Invoking with all valid image names</p>
+					<div id="imageValid"></div>
+					<p>Invoking with valid names and some junk</p>
+					<p>(See console for error messages)</p>
+					<div id="imageJunk"></div>
+				</div>
+				
+			</section>
+		</main>
+		<footer>
+			<a href="www.bcit.ca">BCIT Homepage</a>
+		</footer>
+	</body>
+</html>
