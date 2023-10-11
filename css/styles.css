@@ -37,6 +37,12 @@ footer {
 	width: auto;
 }
 
+.listImage {
+	height: 100px;
+	width: auto;
+	border: solid 2px black;
+}
+
 @media screen and (max-width: 750px) {
 
 }

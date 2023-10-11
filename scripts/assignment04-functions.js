@@ -14,7 +14,7 @@ function listImages(imageArray)
         }
         else
         {
-            imageList += `<li><img src="${image}" alt="${image}"></li>`;
+            imageList += `<li><img src="${pathToImages}${image}" alt="${pathToImages, image}" class="listImage"></li>`;
         }
     });
 
@@ -28,7 +28,7 @@ function listHyperLinks(linkArray)
 
     if(!Array.isArray(linkArray))
     {
-        return `*** Error: you must provide an array. \"${linkArray}}\" is not an array ***`;
+        return `*** Error: you must provide an array. \"${linkArray}\" is not an array ***`;
     }
 
     linkArray.forEach(link => {
@@ -46,19 +46,24 @@ function listHyperLinks(linkArray)
     return linkList;
 }
 
-function listNames(nameArray, listType = "ul")
+function listNames(namesArray, listType = "ul")
 {
     if (!Array.isArray(namesArray)) 
     {
-        return `*** Error: you must provide an array. \"${namesArray}}\" is not an array ***`;
+        return `*** Error: you must provide an array. \"${namesArray}\" is not an array ***`;
     }
 
     if (listType !== 'ul' && listType !== 'ol') 
     {
-        return '*** Error: The second parameter must be either "ul" or "ol" ***';
+        return `*** Error: The second parameter ${listType} must be either "ul" or "ol" ***`;
     }
 
-    let listHTML = `<${listType}>`;
+    if (namesArray.length <= 1)
+    {
+        return "*** Error: Array must contain at least 2 items ***"
+    }
+
+    let listOfNames = `<${listType}>`;
 
     namesArray.forEach(name => {
         if (typeof name !== "string") 
@@ -67,11 +72,11 @@ function listNames(nameArray, listType = "ul")
         }
         else
         {
-            listHTML += `<li>${name}</li>`;
+            listOfNames += `<li>${name}</li>`;
         }
     });
 
-    listHTML += `</${listType}>`;
+    listOfNames += `</${listType}>`;
 
-    return listHTML;
+    return listOfNames;
 }
